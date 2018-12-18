@@ -5,10 +5,11 @@ using SeleniumFramework.Pages;
 namespace SeleniumFrameworkTest.Pages
 {
     [TestClass]
+    [TestCategory("Home Page")]
     public class HomePageTest
     {
         [TestMethod]
-        public void CanGoToAndIsAt_True()
+        public void GoToAndIsAt_True()
         {
             HomePage.GoTo();
 
@@ -16,7 +17,7 @@ namespace SeleniumFrameworkTest.Pages
         }
 
         [TestMethod]
-        public void SearchGuildWarsIsFirstResultGuildWars()
+        public void EnterGuildWarsAndSearch_IsFirstResultGuildWars()
         {
             HomePage.GoTo();
 
