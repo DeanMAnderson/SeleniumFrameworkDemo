@@ -14,5 +14,16 @@ namespace SeleniumFrameworkTest.Pages
 
             Assert.IsTrue(HomePage.IsAt());
         }
+
+        [TestMethod]
+        public void SearchGuildWarsIsFirstResultGuildWars()
+        {
+            HomePage.GoTo();
+
+            HomePage.EnterSearchText("Guild Wars").AndSearch();
+
+
+            Assert.IsTrue(SearchResultPage.IsFirstResultRelatedTo("Guild Wars"));
+        }
     }
 }

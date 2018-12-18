@@ -19,5 +19,10 @@ namespace SeleniumFramework.Pages
         {
             return Driver.Instance.Title == "Google";
         }
+
+        public static SearchCommand EnterSearchText(string text)
+        {
+            return new SearchCommand(text);
+        }
     }
 }
