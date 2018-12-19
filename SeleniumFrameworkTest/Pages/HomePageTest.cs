@@ -26,5 +26,15 @@ namespace SeleniumFrameworkTest.Pages
 
             Assert.IsTrue(SearchResultPage.IsFirstResultRelatedTo("Guild Wars"));
         }
+
+        [TestMethod]
+        public void EnterGuildWarsAndSearch_IsFirstResultLemons()
+        {
+            HomePage.GoTo();
+
+            HomePage.EnterSearchText("Guild Wars").AndSearch();
+
+            Assert.IsFalse(SearchResultPage.IsFirstResultRelatedTo("Lemons"));
+        }
     }
 }
